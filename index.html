@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>eCurrency</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="mainCont" id="home">
+            <header class="header cont">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">eCurrency</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#exchange_section">Currency Exchange</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#calculate_section">Calculate Exchange</a>
+                            </li>
+                            </ul>
+                        </div>                  
+                    </div>
+                </nav>
+
+                <div class="hero bg-light d-flex justify-content-center align-items-center text-center flex-column">
+                    <h1 class="display-4 hero_item">eCurrency Features</h1>
+                    <p class="lead hero_item">eCurrency offers you an up-to-date currency exchange service, currency exchange based on the US dollar and a currency exchange calculator tool.</p>
+                    <a href="#exchange_section" class="btn btn-primary btn-lg hero_item">Learn More</a>
+                </div>
+
+            </header>
+
+            <div class="content cont features">
+                <!-- EXCHANGES -->
+                <div id="exchange_section" class="exchange d-flex justify-content-center align-items-center flex-column text-center">
+                    <h1 class="display-4 content_item">Currency Exchange</h1>
+                    <p class="lead content_item" id="exchange_parr">Currency Exchanges Based on the Currency you Choose</p>
+                    <div class="content_table">
+                        <div class="order_curr_container">
+                            <p id="orderCurrParr">Base Currency:</p>
+                            <select id="orderCurrSelect"></select>
+                            <button type="button" id="orderCurrBtn">ORDER</button>
+                        </div>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Currency</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody id="exchange_tbody">
+                                
+                            </tbody>
+                        </table>
+
+                        <button type="button" id="table_btn" onclick="tblBtnHandler()">Show More</button>
+                    </div>
+                </div>
+
+                <!-- CALCULATE -->
+                <div id="calculate_section" class="Calculator d-flex justify-content-center align-items-center flex-column text-center">
+                    <h1 class="display-4 content_item">Exchange Calculator</h1>
+                    <p class="lead content_item">Currency Exchange Calculator between two Currencies</p>
+                    <form class="calculator_form">
+                        <div class="c1_form">
+                            <!-- amount -->
+                            <p for="amount">Amount:</p>
+                            <input type="text" id="amount">
+                            <!-- select -->
+                            <select id="currency1" name="currency1"></select>
+                        </div>
+                        <div class="c2_form">
+                            <label for="currency2">To Currency:</label> <br>
+                            <select id="currency2" name="currency2"></select>
+                        </div>
+                        <div>
+                            <button type="button" onclick="calculateEx()">Calculate</button>
+                        </div>
+                        <div class="resp_form">
+                            <h4 class="resp_p_form"> </h4>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+            
+
+            <footer class="bg-dark text-light text-center py-4 d-flex justify-content-center align-items-center cont foot">
+                <div class="container">
+                    <p>© 2024 MiSitio. Todos los derechos reservados.</p>
+                    <a href="#" class="text-light mx-2">Política de Privacidad</a>
+                    <a href="#" class="text-light mx-2">Términos de Uso</a>
+                </div>
+            </footer>
+        </div>
+    
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

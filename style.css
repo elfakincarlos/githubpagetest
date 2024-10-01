@@ -1,0 +1,106 @@
+:root{
+    --footer: #212529;
+} 
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+} 
+select {
+    font-family: monospace;
+    font-size: 18px;
+}
+.mainCont{
+    display: grid;
+    grid-template: 400px 1fr 200px / 1fr;
+}
+.cont{
+    /* border: 1px solid red; */
+}
+.header{
+    display: grid;
+    place-items: center;
+}
+.hero{
+    padding: 80px 0 0;
+}
+.hero_item, .content_item{
+    margin: 10px 10px;
+}
+
+
+/* Exchange */
+#exchange_parr {
+    margin-bottom: 30px;
+}
+.content_table{
+    width: 85%;
+    display: grid;
+    grid-template: 50px 1fr 30px / repeat(2, 1fr);
+}
+.table {
+    grid-column: span 2;
+}
+.order_curr_container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212529;
+    color: #fff;
+    border-radius: 10px;
+}
+#orderCurrParr {
+    margin: 0 10px;
+}
+#orderCurrSelect{
+    width: 55px;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+}
+#orderCurrBtn, #table_btn {
+    border: none;
+    border-radius: 7px;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+#table_btn {
+    color: #fff;
+    background-color: #212529;
+    grid-column: 2;
+    justify-self: end;
+    max-width: 200px;
+}
+
+/* Calculator */
+#calculate_section, #exchange_section{
+    padding-top: 70px;
+}
+#calculate_section {
+    margin-bottom: 50px;
+}
+.calculator_form{
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+    place-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+#currency1{
+    width: 60px;
+}
+#currency2{
+    width: 70%;
+}
+
+.resp_form {
+    max-width: 85%;
+}
+
+/* FOOTER */
+.foot{
+    
+}
